@@ -26,14 +26,11 @@ android {
             path "CMakeLists.txt"
         }
     }
-
-    sourceSets {
-        // wolfSSL JNI Java source files are added here
-        main.java.srcDirs += '../wolfcrypt-jni/src/main/java'
-    }
 }
 
 dependencies {
+    implementation project(':wolfcrypt-jni-jar')
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'

@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
+
+sourceSets {
+    // wolfSSL JNI Java source files are added here
+    main.java.srcDirs += '../wolfcrypt-jni/src/main/java'
+}
+
+jar {
+    baseName 'wolfcrypt-jni'
+}
